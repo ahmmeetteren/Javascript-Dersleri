@@ -27,7 +27,6 @@
 
     <script>
         var sonuc;
-
         sonuc = document.getElementById("title"); //idsi title olan etiketi seçer
         sonuc = document.getElementById("title").id; //idsi title olan etiketin id bilgisini getirir.
         sonuc = document.getElementById("title").className; //idsi title olan etiketin class isimlerini getirir.
@@ -36,21 +35,18 @@
         document.getElementById("title").style.fontSize = "30px"; //idsi title olan etiketin font sizesini 30px yapar
         document.getElementById("title").style.color = "blue"; //idsi title olan etiketin rengini blue olarak günceller
         // document.getElementById("title").style.display = "none"; //idsi title olan etiketin displayini none olarak günceller
-
-        
+       
         document.getElementById("title").innerText = "Todo App"; //idsi title olan etiketin textini günceller
         document.getElementById("title").innerHTML = "<p>Todo App</p>"; //inner textten farkı etiket yorumlaması mevcuttur.
 
         sonuc = document.querySelector("#title"); //hem id hem class hem de etiket olarak bir elementi seçmemize olanak sağlar
-        sonuc = document.querySelector(".card-header");
-        sonuc = document.querySelector("div");
+        sonuc = document.querySelector(".card-header"); //classı card-header olan classı seçer. Eğer birden fazla varsa kod bloğunun en üstündekini seçer.
+        sonuc = document.querySelector("div"); //etiketi div olan etiketi seçer. Eğer birden fazla varsa kod bloğunun en üstündekini seçer.
 
         sonuc = document.querySelector("li");        
-        sonuc = document.querySelector("li:first-child");         
-        sonuc = document.querySelector("li:last-child");          
+        sonuc = document.querySelector("li:first-child"); //li etiketinin ilk elementini seçer.         
+        sonuc = document.querySelector("li:last-child");  //li etiketinin son elementini seçer.        
         sonuc = document.querySelector("li:nth-child(2)"); //li etiketlerinin içerisinde dolanmaya yarar nth-child          
-
-        console.log(sonuc);
     </script>
 
 </body>
