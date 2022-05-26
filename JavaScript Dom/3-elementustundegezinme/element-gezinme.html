@@ -50,17 +50,15 @@
         ul = document.getElementById("task-list");
 
         sonuc = ul.children; //ul'nin altındaki elemanlara ulaşmaya yarar.
-        ul.children[0].children[0].children[0].checked = true; //[0], [1] gibi şeylerle o childrenlar arasında gezinebiliriz.
-        // sonuc = ul.firstElementChild;  //ul'nin ilk childını seçer
-        // sonuc = ul.lastElementChild;  //ul'nin son childını seçer
+        ul.children[0].children[0].children[0].checked = true; //[0], [1] ile childrenlar arasında gezinebiliriz.
+        sonuc = ul.firstElementChild;  //ul'nin ilk elementini seçer.
+        sonuc = ul.lastElementChild;  //ul'nin son elementini seçer.
 
-        // sonuc = document.getElementById("title").parentElement;
-        // sonuc = document.querySelector(".task").nextElementSibling.nextElementSibling.previousElementSibling;
+        sonuc = document.getElementById("title").parentElement;
+        sonuc = document.querySelector(".task").nextElementSibling.nextElementSibling.previousElementSibling;
 
-        //parentElement seçilen elementin parentını seçer.
+        //parentElement seçilen elementin parent elemanını seçer.
         //nextElementSibling ve prebiousElementSibling seçilen elementin sonraki ve öncekini seçmeye yarar.
-
-        console.log(sonuc);
     </script>
 
 </body>
