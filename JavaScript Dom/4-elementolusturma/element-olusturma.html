@@ -54,7 +54,7 @@
 
         // var count = ul.children.length;
 
-        for(var gorev of gorevListesi) { //for döngüsüyle sözlük yapısındaki her bir eleman element olarak eklenebilir.
+        for(var gorev of gorevListesi) { //for döngüsüyle sözlük yapısındaki her bir eleman html elementi olarak eklenebilir.
 
             var li = `
                 <li class="task list-group-item">
@@ -63,7 +63,7 @@
                         <label for="${gorev.id}" class="form-check-label">${gorev.gorevAdi}</label>
                     </div>
                 </li>
-            `;//backtick kullanımı
+            `;//backtick kullanılmıştır.
             
             ul.insertAdjacentHTML("beforeend", li);          //seçilen kapsayıcı elemente element eklememize yaramaktadır.  
 
