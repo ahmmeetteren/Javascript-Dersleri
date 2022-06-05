@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        
+        // const msj = ["benim","adım","sadık","turan"];
+        
+        // console.log(...msj); //spread operator yardımıyla (...) olarak kullanılır. dizi içerisindeki tüm elemanları çıkarır.
+
+        // const dizi1 = ["bir","iki"];
+        // const dizi2 = ["üç","dört"];
+
+        // const dizi3 = [...dizi1, ...dizi2,"beş","altı"]; //dizileri birleştirme işlemi yapmamıza yarar.
+
+        const sayilar1 = [1,2,3];
+        // const sayilar2 = sayilar1;   // referans copy //referansını kopyalar bir dizideki değişiklik diğerini de etkiler
+        const sayilar2 = [...sayilar1]; // value copy //value olarak kopyalar bir dizideki değişiklik diğerini etkilememektedir.
+
+        sayilar2[0] = 10;
+
+        const user = {
+            username: "sadikturan",
+            email: "info@gmail.com"
+        }
+
+        const address = {
+            city: "kocaeli"
+        }
+
+        console.log({...user, ...address}); //sözlük yapısında kullanımı da bu şekildedir.
+
+        // rest parameters
+        function toplam(...args) { //rest parameters ne kadar değişken yollanırsa o kadar bir sonuç üretir.
+            let sonuc = 0;
+
+            for (let sayi of args) {
+                sonuc += sayi;
+            } 
+            return sonuc;
+        }
+
+        console.log(toplam(1,3,5));
+        console.log(toplam(1,3,5,10,20));
+
+        function bilgileriGoster(isim, soyad, ...adres) { //adress burda birden fazla değişken alabilir.
+            console.log(isim, soyad, adres);
+        }
+
+        bilgileriGoster("ali","turan","istanbul","kadıköy")
+            
+    </script>
+
+</body>
+</html>
