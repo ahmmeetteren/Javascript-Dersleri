@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const ogrenciler = new Map(); //map tanımı bu şekilde yapılmaktadır. sözlük yapısının daha detaylı ve daha işlevli halidir.
+
+        ogrenciler.set(1, "ali yılmaz"); //set yardımıyla içerisine veri ekleyebiliriz. birinci değişken key ikinci değişken valuedir.
+        ogrenciler.set("56444433333", "efe can");
+        ogrenciler.set(true, "ali can");
+
+        console.log(ogrenciler.get(1)); //get yardımıyla istediğimiz keyi getirebiliriz.
+        console.log(ogrenciler.get("56444433333"));
+        console.log(ogrenciler.get(true));
+
+        let sonuc;
+
+        sonuc = ogrenciler.size; //size yardımıyla kaç elemana sahip olduğunu bulabiliriz.
+        sonuc = ogrenciler.has(2); //keylerde 2 var mı diye sorarız. boolean değer döndürmektedir.
+        // ogrenciler.delete(1); //delete ile belirtilen keye sahip elemanı sileriz.
+        // ogrenciler.clear(); //clear ile hepsini sileriz.
+
+        // for(let x of ogrenciler.keys()) { //keys ve for yardımıyla tüm keyleri getirebiliriz.
+        //     console.log(x);
+        // }
+
+        // for(let x of ogrenciler.values()) { //values ve for yardımıyla tüm valueları getirebiliriz.
+        //     console.log(x);
+        // }
+
+        for(let [key,value] of ogrenciler.entries()) { //bu tarz kullanımla hem keyleri hem valueları değişkenlere atayıp kullanabiliriz.
+            console.log(key, value);
+        }
+
+    </script>
+</body>
+</html>
