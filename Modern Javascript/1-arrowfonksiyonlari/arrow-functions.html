@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // ES5 sürümünde fonksiyon tanımı aşağıdaki gibidir.
+
+        function selamlamaES5() {
+            console.log("merhaba");
+        }
+
+        // ES6 sürümünde ise aşağıdaki gibi arrow fonksiyon yardımıyla tanımlama yapabiliriz.
+        // const selamlamaES6 = () => console.log("merhaba"); //parametre almadan arrow fonksiyon kullanımı.
+        const selamlamaES6 = (isim) => { console.log("merhaba " + isim); } //parametre alan hali eğer birden fazla kod satırı yazılacaksa süszlü parantez içerisine yazmamız gerekir.
+
+        // ES5 sürümünde matematiksel işlem için tanımlanan fonksiyon.
+        var toplamES5 = function (a, b) {
+            return a + b;
+        }
+
+        var sonuc = toplamES5(10, 20);
+
+        // ES6 sürümünde arrow fonksiyon yardımıyla matematiksel işlem yapımı.
+
+        // const toplamES6 = (a,b) => a + b; //return yazmadan da değişken içerisine atabiliriz.
+        const toplamES6 = (a, b) => { return a + b }; //ama eğer süslü parantez kullanacaksak return yapmamız gerekmektedir.
+
+        sonuc = toplamES6(20, 50);
+
+    </script>
+
+</body>
+
+</html>
