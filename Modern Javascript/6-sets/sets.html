@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+    //    const sayilar = new Set([1,2,3]);
+       const sayilar = new Set(); //array(dizi) yapısına benzemektedir. 
+
+       sayilar.add(1); //add ile eleman ekleyebiliriz.
+       sayilar.add(2);
+       sayilar.add(3);
+       sayilar.add(3);
+       sayilar.add("4");
+
+    //    const dizi = [...sayilar];
+
+        sayilar.delete(1); //delete yardımıyla belirtilen elemanı silebiliriz.
+        console.log(sayilar.has(1)); //has yardımıyla belirtilen elemanın varlığını sorgulayabiliriz. boolean değer döndürmektedir.
+
+        // sayilar.clear();
+
+        for(let x of sayilar) { //for döngüsü yardımıyla sayılar içerisinde gezinebiliriz.
+            console.log(x);
+        }
+
+        
+    </script>
+</body>
+</html>
